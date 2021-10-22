@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Chicken King</title>
+      
+       <link href="chickenKing.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+      
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vibur&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+      <div class="container-fluid">
+          
+          <div clas="row">
+              <h1 id="logo">Chicken King</h1>
+          </div>
+          
+          <div class="row">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="chickenKing1.jpg" alt="Chania">
+      <div class="carousel-caption">
+        <h3>Whammy chicken</h3>
+        <p>Our new addition to the menu</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="chickenKing2.jpg" alt="Chicago">
+      <div class="carousel-caption">
+        <h3>Chicken Veggie</h3>
+        <p>Enjoy our grilled chicken and veggie</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="chickenKing3.jpg" alt="New York">
+      <div class="carousel-caption">
+        <h3>Whammy Burger</h3>
+        <p>Tastes as good as it looks</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+              </div>
+          <div class="row" id="toprow">
+              <div class="col-sm-4 col-sm-offset-1 col-xs-6">
+                  <img src="chicken1.jpg" class="img-responsive">
+                  <h1 class="textImage">100% Fresh</h1>
+              </div>
+              <div class="col-sm-4 col-sm-offset-2 col-xs-6">
+                  <img src="chicken2.jpg" class="img-responsive">
+                  <h1 class="textImage">Hand-Made</h1>
+              </div>
+          </div>
+           <div class="row" id="bottomrow">
+              <div class="col-sm-4 col-sm-offset-1 col-xs-6">
+                  <img src="chicken3.jpg" class="img-responsive">
+                  <h1 class="textImage">Crispy</h1>
+              </div>
+              <div class="col-sm-4 col-sm-offset-2 col-xs-6">
+                  <img src="chicken4.jpg" class="img-responsive">
+                  <h1 class="textImage">Grilled</h1>
+              </div>
+          </div>
+          
+          <div class="row text-center">
+          <h1><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Order Now <span class="glyphicon glyphicon-earphone" aria-hidden="true"></h1>
+              <h1><a class="btn btn-primary btn-xlg" href="tel:+35315031754" style="padding:20px;background-color:rgba(0,0,238,.5)">
+   Click to Call <span class="glyphicon glyphicon-earphone" style="padding-left:10px; padding-right:10px;"></span>+35315031754</a></h1>
+          </div>
+              
+              <div class="row">
+                  <div id="map"></div>
+              </div>
+              
+              <div class="row text-center" id="bottomSection">
+              <h1>Find Us Online</h1>
+                  <div class="col-xs-4">
+                      <a href=""><i class="fa fa-twitter-square fa-5x"></i>
+                      </a></div>
+                  <div class="col-xs-4">
+                      <a href=""><i class="fa fa-instagram fa-5x" aria-hidden="true"></i>
+                  </a></div>
+                  <div class="col-xs-4">
+                      <a href=""><i class="fa fa-youtube fa-5x" aria-hidden="true"></i>
+                  </a></div>
+
+
+              </div>
+</div>
+   
+<script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of chickenKing
+        const chickenKing = { lat: 53.3842, lng: 6.3760 };
+        // The map, centered at chickenKing
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 16,
+          center: chickenKing, 
+            scrollwheel: false
+        });
+        // The marker, positioned at chickenKing
+        const marker = new google.maps.Marker({
+          position: chickenKing,
+          map: map,
+        });
+      }
+    </script>
+          <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEXCYfHC2dlM5aP0Y9HteK-7PaUqdr6XI&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
